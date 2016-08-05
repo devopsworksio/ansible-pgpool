@@ -6,8 +6,6 @@
    - vagrant_sudo_fix
    - epel
    - centos_libevent_fix
-   - disable_firewall
-
    - role: etc_hosts
      interface: eth1
 
