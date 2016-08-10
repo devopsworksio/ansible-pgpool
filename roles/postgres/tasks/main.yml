@@ -20,7 +20,8 @@
   template: src=pg_recovery_template.conf.j2 dest=/usr/local/etc/pg_recovery_template.conf
 
 - name: Initialise the DB server
-  command: creates=/var/lib/pgsql/9.5/data/PG_VERSION  /usr/pgsql-9.5/bin/postgresql95-setup initdb
+  command: creates=/var/lib/pgsql/9.5/data/pg_hba.conf  /usr/pgsql-9.5/bin/postgresql95-setup initdb
+  become_user: root
 
 # This include sets up the following variables:
 #  - postgres_status: Is this server a master or slave?

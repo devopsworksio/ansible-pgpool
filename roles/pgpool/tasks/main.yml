@@ -3,6 +3,7 @@
   yum: name={{ item }} state=installed
   with_items:
    - pgpool-II-95
+   - pgpool-II-95-extensions
 
 - name: Setup pgpool extensions
   sudo_user: postgres
